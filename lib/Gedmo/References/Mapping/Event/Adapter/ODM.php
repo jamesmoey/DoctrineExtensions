@@ -58,7 +58,6 @@ final class ODM extends BaseAdapterODM implements ReferencesAdapter
      */
     public function getSingleReference($om, $class, $identifier)
     {
-        $this->throwIfNotEntityManager($om);
         $meta = $om->getClassMetadata($class);
 
         if (!$meta->isInheritanceTypeNone()) {
